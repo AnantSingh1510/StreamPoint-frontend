@@ -34,7 +34,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://172.16.100.81:8080/api/videos/list")
+      .get("http://videostreaming-env-1.eba-mmabnrqa.eu-north-1.elasticbeanstalk.com/api/videos/list")
       .then((response) => {
         setVideos(response.data.reverse());
         // console.log(response.data);
@@ -90,7 +90,7 @@ const App = () => {
                   fit={"cover"}
                   marginBottom={0}
                   marginTop={0}
-                  src={`http://172.16.100.81:8080/api/videos/thumbnail/${video.thumbnailUrl}`}
+                  src={`http://videostreaming-env-1.eba-mmabnrqa.eu-north-1.elasticbeanstalk.com/api/videos/thumbnail/${video.thumbnailUrl}`}
                   onLoad={() => handleImageLoad(index)}
                   display={imageLoaded[index] ? "block" : "none"}
                   alt={video.title}

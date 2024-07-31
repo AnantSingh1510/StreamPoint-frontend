@@ -3,7 +3,7 @@ import { create } from 'zustand';
 const useStore = create((set) => ({
     currentVideo: null,
     setCurrentVideo: (videoKey) => set({
-        currentVideo: `http://172.16.100.81:8080/api/videos/stream/${videoKey}`
+        currentVideo: `http://videostreaming-env-1.eba-mmabnrqa.eu-north-1.elasticbeanstalk.com/api/videos/stream/${videoKey}`
     }),
     currentTitle: '',
     setCurrentTitle: (title) => set({

@@ -40,7 +40,7 @@ const UploadVideo = () => {
     formData.append('thumbnail', thumbnail);
 
     try {
-      const response = await axios.post('http://172.16.100.81:8080/api/videos', formData, {
+      const response = await axios.post('http://videostreaming-env-1.eba-mmabnrqa.eu-north-1.elasticbeanstalk.com/api/videos', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
